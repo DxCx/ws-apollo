@@ -11,6 +11,7 @@
     "test:watch": "npm test -- --watch",
     "coverage": "npm test -- --coverage --no-cache",
     "coverage:watch": "npm run coverage -- --watch",
+    "lint": "tslint ./src/**/*.ts",
     "prerelease": "npm run build && npm test",
     "release": "standard-version && npm pack"
   },
@@ -51,8 +52,18 @@
     "webpack": "^2.1.0-beta.22",
     "webpack-node-externals": "^1.4.3"
   },
+  "peerDependencies": {
+    "apollo-server": "^0.2.x",
+    "graphql": "^0.7.0 || ^0.7.0",
+    "subscriptions-transport-ws": "^0.2.x",
+    "typed-graphql": "^1.0.1"
+  },
   "dependencies": {},
   "jest": {
+    "apollo-server": "^0.3.0",
+    "graphql": "^0.7.0",
+    "subscriptions-transport-ws": "^0.2.2",
+    "typed-graphql": "^1.0.1",
     "scriptPreprocessor": "node_modules/typescript-babel-jest",
     "testEnvironment": "node",
     "testRegex": ".*\\.spec\\.ts$",
